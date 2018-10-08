@@ -14,7 +14,9 @@ the widget state must be kept in Redux!
 ## Setup
 
 ```
-$ git clone ???
+$ git clone git@github.com:kairosfuture/dcipher-challenge.git
+
+$ cd dcipher-challenge
 
 $ npm install
 ```
