@@ -1,0 +1,26 @@
+@import '../../style/variables';
+
+.counter {
+  button {
+    width: $widget-width - 20px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+  }
+  button:hover {
+    background-color: lightgray;
+  }
+  button:active {
+    background-color: darkgray;
+  }
+  button:focus {
+    outline:0;
+  }
+  .current {
+    text-align: center;
+    font-size: 80px;
+    height: 100px;
+  }
+}

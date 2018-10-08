@@ -1,0 +1,21 @@
+@import '../../style/variables';
+
+.emptyslot {
+  button {
+    width: $widget-width - 20px;
+    height: $widget-height / 2 - 20px;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+  }
+  button:hover {
+    background-color: lightgray;
+  }
+  button:active {
+    background-color: darkgray;
+  }
+  button:focus {
+    outline:0;
+  }
+}
