@@ -33,7 +33,12 @@ You should now be able to browse to <http://localhost:8000>.
 
 #### Alternative 1:
 
-Create a *private* fork of this repository on GitHub (so that other participants cannot copy your solution), and give accounts `loffek` and `Atralbus` at least read access.
+Create a *private* fork of this repository on GitHub (so that other participants cannot copy your solution), and give account `loffek` at least read access.
 
 #### Alternative 2:
-If you don't use GitHub, or are out of private repositories, its ok to just zip the source and email it to `info@dcipheranalytics.com` instead.
+
+Create a *private* fork of this repository on BitBucket (so that other participants cannot copy your solution), and give account `loffek` at least read access.
+
+#### Alternative 3:
+
+Zip the whole repository and email a download link to `info@dcipheranalytics.com`.
