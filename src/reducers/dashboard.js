@@ -6,11 +6,15 @@ const initial = {
 export const dashboard = (state = initial, action) => {
   switch (action.type) {
     case ADD_COUNTER:
-      state.widgets.push("counter");
-      return state;
+      return {
+        ...state,
+        widget:state.widgets.push("counter")
+      };
     case ADD_TODO_LIST:
-      state.widgets.push("todo");
-      return state;
+      return {
+        ...state,
+        widget:state.widgets.push("todo")
+      };
     default:
       return state;
   }
