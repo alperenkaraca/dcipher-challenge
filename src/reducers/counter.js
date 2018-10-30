@@ -3,30 +3,21 @@ import {
   INCREMENT,
   DECREMENT
 } from '../actions/counter'
-import type _Action from '../types'
 
-type CounterState = {
-  current: number
-}
 
-const initial: CounterState = {
-  current: 0,
-}
-
-export const counter = (state: CounterState = initial, action: _Action): CounterState => {
+export const counter = (state= {}, action) => {
   switch (action.type) {
     case INCREMENT:
       return {
         ...state,
-        current: state.current + 1
-      }
-    case DECREMENT: {
+        [action.id]: (state[action.id] || 0) + 1,
+      };
+    case DECREMENT:
       return {
         ...state,
-        current: state.current - 1
-      }
-    }
+        [action.id]: (state[action.id] || 0) -1,
+      };
     default:
-      return state
+      return state;
   }
 }

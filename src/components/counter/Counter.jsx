@@ -8,20 +8,21 @@ import {
 
 class Counter extends Component {
 
-  handleIncrement = () => {
-    this.props.increment()
+  handleIncrement = (key) => {
+    this.props.increment(key)
   }
 
-  handleDecrement = () => {
-    this.props.decrement()
+  handleDecrement = (key) => {
+    this.props.decrement(key)
   }
 
   render () {
+    const {id} = this.props
     return (
       <div className='widget counter'>
-        <div className='current'>{this.props.current}</div>
-        <button onClick={this.handleIncrement}>Increment</button>
-        <button onClick={this.handleDecrement}>Decrement</button>
+       <div className='current'>{this.props[id]|| 0}</div>
+        <button onClick={()=>this.handleIncrement(id)}>Increment</button>
+        <button onClick={()=>this.handleDecrement(id)}>Decrement</button>
       </div>
     )
   }
@@ -30,8 +31,8 @@ const mapStateToProps = ({ counter }) => counter
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: () => dispatch(increment()),
-    decrement: () => dispatch(decrement())
+    increment: (id) => dispatch(increment(id)),
+    decrement: (id) => dispatch(decrement(id))
   }
 }
 

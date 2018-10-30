@@ -22,8 +22,8 @@ class Dashboard extends Component {
   render () {
     const widgets = this.props.widgets.map((widget, idx) => {
       switch (widget) {
-        case 'counter': return <Counter key={idx} />
-        case 'todo': return <Todo key={idx} />
+        case 'counter': return <Counter key={idx} id={idx} />
+        case 'todo': return <Todo key={idx} id={idx} />
         default: null
       }
     })
