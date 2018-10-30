@@ -1,9 +1,11 @@
+export const ADD_COUNTER = "ADDCOUNTER";
+export const ADD_TODO_LIST = "ADDTODO";
 
 export const addCounter = (idx) => (dispatch) => {
-  alert(`addCounter(${idx}) Not Implemented`)
+  dispatch({ type: ADD_COUNTER, idx });
 }
 
 export const addTodo = (idx) => (dispatch) => {
-  alert(`addTodo(${idx}) Not Implemented`)
+  dispatch({ type: ADD_TODO_LIST, idx });
 }
 
